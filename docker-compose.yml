@@ -1,0 +1,12 @@
+services:
+  app:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "8888:8888"
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '1'
